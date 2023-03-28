@@ -19,20 +19,26 @@
 
     .attribution a {
       color: hsl(228, 45%, 44%);
-    }
 
-    @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+    }
   </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
+          fontFamily: {
+            'sans': ['Karla', 'sans-serif']
+          },
           colors: {
+            DarkerCyan: "hsl(179, 62%, 41%)",
             Cyan: "hsl(179, 62%, 43%)",
             BrightYellow: "hsl(71, 73%, 54%)",
             LightGray: "hsl(204, 43%, 93%)",
-            GrayishBlue: "hsl(218, 22%, 67%)",
+            GrayishBlue: "hsl(218, 22%, 67%)"
           }
         }
       }
@@ -40,26 +46,29 @@
   </script>
 </head>
 
-<body>
-  <div class="cards-container grid grid-cols-1 sm:grid-cols-2 gap-4">
-    <div class="join-community-card sm:col-span-2 bg-Cyan">
-      <h2 class="text-lg">Join our community</h2>
-      <h3 class="text-base">30-day, hassle-free money back guarantee</h3>
-      <p class="text-sm">
+<body class="bg-LightGray my-6 mx-8 font-sans flex flex-col justify-center items-center box-border">
+  <div
+    class="grid grid-cols-1 max-w-md text-xs text-white [&>*]:p-4 sm:grid-cols-2 sm:max-w-2xl sm:text-sm sm:[&>*]:p-8">
+    <div class="bg-white rounded-t-lg [&>*]:p-2 sm:col-span-2 sm:[&>*]:p-1.5">
+      <h2 class="text-lg text-Cyan font-bold sm:text-xl">Join our community</h2>
+      <h3 class="text-sm text-BrightYellow font-bold sm:text-base">30-day, hassle-free money back guarantee</h3>
+      <p class="text-GrayishBlue">
         Gain access to our full library of tutorials along with expert code reviews.
         Perfect for any developers who are serious about honing their skills.
       </p>
     </div>
 
-    <div class="sign-up-card">
-      <h2>Monthly Subscription</h2>
-      <p><b>&dollar;29</b> per month</p>
-      <p>Full access for less than &dollar;1 a day</p>
-      <button>Sign Up</button>
+    <div class="bg-DarkerCyan [&>*]:p-1 w-full sm:rounded-bl-lg">
+      <h2 class="text-lg font-bold">Monthly Subscription</h2>
+      <p class="flex gap-3"><b class="text-3xl font-bold">&dollar;29</b> <span
+          class="text-base opacity-60 self-center">per month</span>
+      </p>
+      <p class="text-base">Full access for less than &dollar;1 a day</p>
+      <button class="bg-BrightYellow w-full h-11 mt-3 mb-2 rounded-md text-sm font-bold">Sign Up</button>
     </div>
 
-    <div class="why-us-card">
-      <h2>Why Us</h2>
+    <div class="bg-Cyan rounded-b-lg [&>*]:p-2 sm:rounded-br-lg sm:rounded-bl-none">
+      <h2 class="text-lg font-bold">Why Us</h2>
       <p>
         Tutorials by industry experts<br>
         Peer &amp; expert code review<br>
